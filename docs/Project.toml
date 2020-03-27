@@ -1,0 +1,6 @@
+[deps]
+DistributionsGPU = "c1c7bdc4-fdd0-4a49-b85f-168c31ff4809"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[compat]
+Documenter = "~0.22"
