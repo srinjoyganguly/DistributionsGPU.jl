@@ -1,0 +1,13 @@
+name = "DistributionsGPU"
+uuid = "c1c7bdc4-fdd0-4a49-b85f-168c31ff4809"
+authors = ["Srinjoy Ganguly"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
