@@ -2,7 +2,7 @@
 
 import PDMats: ScalMat, PDiagMat, PDMat
 
-using Distributions
+using DistributionsGPU
 using LinearAlgebra, Random, Test
 
 import Distributions: distrname
