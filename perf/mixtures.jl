@@ -1,6 +1,6 @@
 using BenchmarkTools: @btime
 import Random
-using Distributions: AbstractMixtureModel, MixtureModel, LogNormal, Normal, pdf, ncomponents, probs, component, components, ContinuousUnivariateDistribution
+using DistributionsGPU: AbstractMixtureModel, MixtureModel, LogNormal, Normal, pdf, ncomponents, probs, component, components, ContinuousUnivariateDistribution
 using Test
 
 # v0.22.1

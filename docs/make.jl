@@ -1,4 +1,4 @@
-using Documenter, Distributions
+using Documenter, DistributionsGPU
 import Random: AbstractRNG, rand!
 
 makedocs(
