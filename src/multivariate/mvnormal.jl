@@ -84,11 +84,11 @@ mode(d::AbstractMvNormal) = mean(d)
 modes(d::AbstractMvNormal) = [mean(d)]
 
 """
-    rand(::AbstractRNG, ::Distributions.AbstractMvNormal)
+    rand(::AbstractRNG, ::DistributionsGPU.AbstractMvNormal)
 
 Sample a random vector from the provided multi-variate normal distribution.
 """
-rand(::AbstractRNG, ::Distributions.AbstractMvNormal)
+rand(::AbstractRNG, ::DistributionsGPU.AbstractMvNormal)
 
 function entropy(d::AbstractMvNormal)
     ldcd = logdetcov(d)
