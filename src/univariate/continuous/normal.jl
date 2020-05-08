@@ -106,15 +106,15 @@ function logpdf(d::Normal, x::Real)
     μ, σ = d.μ, d.σ
     if iszero(d.σ)
         if x == μ
-            z = zval(Normal(μ, one(σ)), x)
+            z = zval.(Normal(μ, one(σ)), x)
         else
-            z = zval(d, x)
+            z = zval.(d, x)
             σ = one(σ)
         end
     else
-        z = zval(Normal(μ, σ), x)
+        z = zval.(d, x)
     end
-    return _normlogpdf(z) - log(σ)
+    return _normlogpdf.(z) - CUDAnative.log(σ)
 end
 
 # pdf
