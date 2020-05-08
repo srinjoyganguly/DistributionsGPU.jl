@@ -2,7 +2,7 @@ module DistributionsGPU
 
 using StatsBase, PDMats, StatsFuns, Statistics
 using StatsFuns: logtwo, invsqrt2, invsqrt2π
-
+using CUDAnative, CuArrays, CUDAdrv
 import QuadGK: quadgk
 import Base: size, length, convert, show, getindex, rand, vec, inv
 import Base: sum, maximum, minimum, extrema, +, -, *, ==
