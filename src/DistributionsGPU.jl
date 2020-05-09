@@ -4,7 +4,7 @@ using CUDAnative, CuArrays, CUDAdrv
 using Distributions
 using Distributions: ContinuousUnivariateDistribution
 
-include("normal.jl")
+include("src/univariate/continuous/normal.jl")
 
 export GPUNormal, logpdfGPU
 
