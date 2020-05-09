@@ -32,18 +32,18 @@ struct GPUNormal{T<:Real} <: ContinuousUnivariateDistribution
     σ::T
 end
 
-zvalGPU(d::GPUNormal, x::Real) = (x - d.μ) / d.σ
+zvalGPU(d::Normal, x::Real) = (x - d.μ) / d.σ
 
-gradlogpdf(d::GPUNormal, x::Real) = -zval(d, x) / d.σ
+gradlogpdf(d::Normal, x::Real) = -zval(d, x) / d.σ
 
 # logpdf
 _normlogpdfGPU(z::Real) = -(abs2(z) + Distributions.log2π)/2
 
-function logpdfGPU(d::GPUNormal, x::Real)
+function logpdfGPU(d::Normal, x::Real)
     μ, σ = d.μ, d.σ
     if iszero(d.σ)
         if x == μ
-            z = zvalGPU.(GPUNormal(μ, one(σ)), x)
+            z = zvalGPU.(Normal(μ, one(σ)), x)
         else
             z = zvalGPU.(d, x)
             σ = one(σ)
