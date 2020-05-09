@@ -30,7 +30,6 @@ External links
 struct GPUNormal{T<:Real} <: ContinuousUnivariateDistribution
     μ::T
     σ::T
-    GPUNormal{T}(µ::T, σ::T) where {T<:Real} = new{T}(µ, σ)
 end
 
 zvalGPU(d::GPUNormal, x::Real) = (x - d.μ) / d.σ
