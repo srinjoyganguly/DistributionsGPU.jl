@@ -6,6 +6,6 @@ using Distributions: ContinuousUnivariateDistribution, Normal
 
 include("univariate/continuous/normal.jl")
 
-export logpdfGPU
+export logpdfGPU, GPUNormal
 
 end # module

@@ -27,7 +27,7 @@ External links
 * [Normal distribution on Wikipedia](http://en.wikipedia.org/wiki/Normal_distribution)
 
 """
-struct GPUNormal{T<:Real} <: ContinuousUnivariateDistribution
+struct GPUNormal{T} <: ContinuousUnivariateDistribution
     μ::T
     σ::T
 end
@@ -53,3 +53,5 @@ function logpdfGPU(d::Normal, x::Real)
     end
     return _normlogpdfGPU.(z) - CUDAnative.log(σ)
 end
+
+#Distributions.logpdf(d::GPUNormal, x::Real) = ...
